@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ========== SEO DE BASE ========== -->
+  <title>Dev Portfolio — Développeur Web & Mobile</title>
+  <meta name="description"
+    content="Portfolio de développeur web, mobile et ingénieur logiciel. Spécialisé en React, Angular, Spring Boot, PHP et MySQL." />
+  <meta name="keywords"
+    content="développeur web, développeur mobile, ingénieur logiciel, React, Angular, Spring Boot, PHP, MySQL" />
+  <meta name="author" content="Votre Nom" />
+  <meta property="og:title" content="Dev Portfolio — Développeur Web & Mobile" />
+  <meta property="og:description" content="Portfolio professionnel — Développeur Web, Mobile & Ingénieur Logiciel" />
+  <meta property="og:type" content="website" />
+
+  <!-- ========== POLICES GOOGLE ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ========== ICÔNES FONT AWESOME ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ========== FEUILLE DE STYLE PRINCIPALE ========== -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ====================================================
+       CURSEUR PERSONNALISÉ
+  ===================================================== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ====================================================
+       BARRE DE NAVIGATION
+  ===================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Initiales -->
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">AF</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Liens de navigation (desktop) -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#projects" class="nav-link">Projets</a></li>
+        <li><a href="#experience" class="nav-link">Expérience</a></li>
+        <li><a href="#education" class="nav-link">Formation</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Actions (dark mode + menu burger) -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====================================================
+       MENU MOBILE (overlay)
+  ===================================================== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <ul>
+      <li><a href="#about" class="mobile-link">À propos</a></li>
+      <li><a href="#skills" class="mobile-link">Compétences</a></li>
+      <li><a href="#projects" class="mobile-link">Projets</a></li>
+      <li><a href="#experience" class="mobile-link">Expérience</a></li>
+      <li><a href="#education" class="mobile-link">Formation</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ====================================================
+       SECTION HERO
+  ===================================================== -->
+  <section class="hero" id="hero">
+    <!-- Grille de fond décorative -->
+    <div class="hero-grid"></div>
+
+    <!-- Orbes lumineux -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="hero-content">
+      <!-- Badge de disponibilité -->
+      <div class="availability-badge fade-up">
+        <span class="pulse-dot"></span>
+        Disponible pour de nouvelles opportunités
+      </div>
+
+      <!-- Titre principal -->
+      <h1 class="hero-title fade-up">
+        <span class="hero-greeting">Bonjour, je suis</span>
+        <span class="hero-name">Abdoulaye Séne Fall</span>
+        <!-- Effet de typing -->
+        <span class="hero-role">
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </span>
+      </h1>
+
+      <!-- Description courte -->
+      <p class="hero-description fade-up">
+        Étudiant en Master Ingénierie Logicielle | Développeur Full-Stack Java, Spring Boot,
+         React & PHP | À la recherche d'un stage de fin d'études
+      </p>
+
+      <!-- Boutons d'appel à l'action -->
+      <div class="hero-cta fade-up">
+        <a href="#projects" class="btn btn-primary">
+          Voir mes projets
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          Me contacter
+        </a>
+      </div>
+
+      <!-- Statistiques rapides -->
+      <div class="hero-stats fade-up">
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Ans d'expérience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Projets réalisés</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">6+</span>
+          <span class="stat-label">Technologies maîtrisées</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECTION À PROPOS
+  ===================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image / Avatar -->
+        <div class="about-visual reveal">
+          <div class="about-image-wrapper">
+            <!-- Remplacer par votre photo -->
+            <img src="src/photo.jpeg" alt="Jean Dupont"
+              style="width:260px; height:295px; border-radius:2rem; object-fit:cover; display:block;" />
+            <!-- Badge flottant -->
+            <div class="about-badge">
+              <i class="fas fa-code"></i>
+              <span>Full-Stack Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texte -->
+        <div class="about-content reveal">
+          <div class="section-label">À propos de moi</div>
+          <h2 class="section-title">
+            Passionné par le code,<br />
+            <em>obsédé</em> par la qualité
+          </h2>
+          <p class="about-text">
+            Développeur Web & Mobile et Ingénieur Logiciel, je crée des solutions
+            numériques robustes et élégantes. Mon parcours m'a permis d'acquérir
+            une expertise solide en développement front-end et back-end, avec
+            une vision orientée performance et scalabilité.
+          </p>
+          <p class="about-text">
+            J'aime résoudre des problèmes complexes en les transformant en
+            interfaces simples et intuitives. Chaque projet est pour moi
+            une opportunité d'apprendre et de repousser mes limites.
+          </p>
+
+          <!-- Informations personnelles -->
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Dakar, Sénégal</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>alf1001fall@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>License en Développement web et mobile</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-language"></i>
+              <span>Français, Anglais</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-primary" download>
+            <i class="fas fa-download"></i>
+            Télécharger mon CV
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECTION COMPÉTENCES
+  ===================================================== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Ce que je maîtrise</div>
+        <h2 class="section-title">Compétences techniques</h2>
+        <p class="section-subtitle">
+          Un stack complet pour concevoir, développer et déployer des
+          applications modernes de bout en bout.
+        </p>
+      </div>
+
+      <!-- Grille des catégories de compétences -->
+      <div class="skills-grid">
+
+        <!-- Front-End -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Front-End</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-js-square"></i> JavaScript</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-react"></i> React</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-angular"></i> Angular</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back-End -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3>Back-End</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-java"></i> Spring Boot</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-php"></i> PHP</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fas fa-database"></i> MySQL</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fas fa-network-wired"></i> REST API</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile & Outils -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile & Outils</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-react"></i> React Native</span>
+                <span class="skill-percent">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-docker"></i> Docker</span>
+                <span class="skill-percent">65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fab fa-figma"></i> Figma</span>
+                <span class="skill-percent">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Badges de technologies -->
+      <div class="tech-badges reveal">
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">Linux</span>
+        <span class="tech-badge">Agile / Scrum</span>
+        <span class="tech-badge">Tailwind CSS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECTION PROJETS
+  ===================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Ce que j'ai construit</div>
+        <h2 class="section-title">Projets récents</h2>
+        <p class="section-subtitle">
+          Une sélection de mes réalisations. Chaque projet reflète mon
+          engagement pour la qualité et l'innovation.
+        </p>
+      </div>
+
+      <!-- Filtres de projets -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+      </div>
+
+      <!-- Grille des projets -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Projet 1 -->
+        <article class="project-card reveal" data-category="fullstack">
+          <div class="project-image">
+            <div class="project-placeholder" style="--color: #8b5cf6">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+
+            <div class="project-overlay">
+              <a href="https://github.com/Abdoulaye308/money-transfert-app-Yoonel" class="project-link"
+                aria-label="Voir sur GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+
+              <a href="#" class="project-link" aria-label="Voir la démo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">JWT</span>
+            </div>
+
+            <h3 class="project-title">Yonne Xaliss</h3>
+
+            <p class="project-description">
+              Application fintech de transfert d'argent permettant les dépôts,
+              retraits et transferts sécurisés entre utilisateurs avec authentification JWT,
+              tableau de bord interactif et gestion administrative complète.
+            </p>
+
+            <div class="project-footer">
+              <a href="https://github.com/Abdoulaye308/money-transfert-app-Yoonel" class="project-btn">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+
+              <a href="#" class="project-btn project-btn-primary">
+                Voir le projet <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-image">
+            <div class="project-placeholder" style="--color: #3b82f6">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+
+            <div class="project-overlay">
+              <a href="https://github.com/Abdoulaye308/p2p-file-sharing-system" target="_blank" class="project-link"
+                aria-label="Voir sur GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+
+              <a href="#" class="project-link" aria-label="Voir la démo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">REST API</span>
+              <span class="project-tag">P2P</span>
+            </div>
+
+            <h3 class="project-title">
+              Distributed P2P File Sharing System
+            </h3>
+
+            <p class="project-description">
+              Système distribué de partage de fichiers basé sur une architecture
+              Peer-to-Peer (P2P). Chaque nœud peut stocker, rechercher et
+              répliquer des fichiers tout en restant autonome. Le projet
+              implémente la réplication intelligente, la recherche distribuée,
+              la tolérance aux pannes et un tableau de bord temps réel avec
+              journalisation persistante.
+            </p>
+
+            <div class="project-footer">
+
+              <a href="https://github.com/Abdoulaye308/p2p-file-sharing-system" target="_blank" class="project-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+
+              <a href="#" class="project-btn project-btn-primary">
+                Architecture P2P
+                <i class="fas fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 3 -->
+        <article class="project-card reveal" data-category="fullstack">
+          <div class="project-image">
+            <div class="project-placeholder" style="--color: #0ea5e9">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Abdoulaye308/universite-management-system" target="_blank"
+                class="project-link" aria-label="Voir sur GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-link" aria-label="Voir la démo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Thymeleaf</span>
+            </div>
+
+            <h3 class="project-title">
+              DSMS — Système Distribué de Gestion des Ventes
+            </h3>
+
+            <p class="project-description">
+              Application web distribuée permettant la gestion et la synchronisation
+              des ventes entre plusieurs bases de données régionales (Dakar,
+              Thiès et Saint-Louis). Le système assure la continuité de service
+              même en cas d'indisponibilité d'une base, détecte les conflits de
+              données et fournit un tableau de bord de supervision en temps réel.
+            </p>
+
+            <div class="project-footer">
+              <a href="https://github.com/Abdoulaye308/p2p-file-sharing-system" target="_blank" class="project-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+              <a href="#" class="project-btn project-btn-primary">
+                Démo <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 4 -->
+        <article class="project-card reveal" data-category="fullstack">
+          <div class="project-image">
+            <div class="project-placeholder" style="--color: #8b5cf6">
+              <i class="fas fa-university"></i>
+            </div>
+
+            <div class="project-overlay">
+              <a href="https://github.com/Abdoulaye308/universite-management-system" target="_blank"
+                class="project-link" aria-label="Voir sur GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+
+              <a href="#" class="project-link" aria-label="Voir la démo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-tags">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">MySQL</span>
+            </div>
+
+            <h3 class="project-title">
+              University Management System
+            </h3>
+
+            <p class="project-description">
+              Système de gestion universitaire développé avec Angular,
+              Spring Boot et MySQL intégrant la gestion des étudiants,
+              formations, inscriptions, stages, insertion professionnelle,
+              réunions administratives, documents officiels, tableaux de bord
+              par rôle, statistiques et génération de rapports PDF.
+            </p>
+
+            <div class="project-footer">
+
+              <a href="https://github.com/Abdoulaye308/universite-management-system" target="_blank"
+                class="project-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+
+              <a href="#" class="project-btn project-btn-primary">
+                Démo
+                <i class="fas fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 5 -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-image">
+            <div class="project-placeholder" style="--color: #0ea5e9">
+              <i class="fas fa-school"></i>
+            </div>
+
+            <div class="project-overlay">
+              <a href="https://github.com/Abdoulaye308/gestion-college" target="_blank"
+                class="project-link" aria-label="Voir sur GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-link" aria-label="Voir la démo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Bootstrap</span>
+              <span class="project-tag">TCPDF</span>
+            </div>
+
+            <h3 class="project-title">
+              Système de Gestion de Collège
+            </h3>
+
+            <p class="project-description">
+              Application web complète permettant la gestion d’un établissement scolaire.
+              Elle intègre la gestion des élèves, classes, matières, professeurs,
+              surveillants, notes, absences, bulletins scolaires PDF et notifications
+              internes avec des espaces dédiés à chaque rôle utilisateur.
+            </p>
+
+            <div class="project-footer">
+              <a href="https://github.com/Abdoulaye308/gestion-college" target="_blank" class="project-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+
+              <a href="#" class="project-btn project-btn-primary">
+                Démo <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 6 -->
+        <article class="project-card reveal" data-category="mobile">
+          <div class="project-image">
+            <div class="project-status">
+              🚧 En cours de développement
+            </div>
+            <div class="project-placeholder" style="--color: #00853f">
+              <i class="fas fa-question-circle"></i>
+            </div>
+
+            <div class="project-overlay">
+              <a href="https://github.com/Abdoulaye308/galsenquiz" target="_blank" class="project-link"
+                aria-label="Voir sur GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="project-link" aria-label="Voir la démo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Firebase</span>
+              <span class="project-tag">Riverpod</span>
+              <span class="project-tag">En cours</span>
+            </div>
+
+            <h3 class="project-title">
+              GalsenQuiz
+            </h3>
+
+            <p class="project-description">
+              Application mobile éducative actuellement en cours de développement,
+              permettant aux Sénégalais et aux étrangers de découvrir l'histoire,
+              la culture, la géographie, les personnalités et les richesses du
+              Sénégal à travers des quiz interactifs, un système de progression,
+              des badges et des classements.
+            </p>
+
+            <div class="project-footer">
+              <a href="https://github.com/Abdoulaye308/galsenquiz" target="_blank" class="project-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+
+              <a href="#" class="project-btn project-btn-primary">
+                En développement <i class="fas fa-code"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECTION EXPÉRIENCE
+  ===================================================== -->
+  <section class="section section-alt" id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Expériences pratiques</div>
+      <h2 class="section-title">Expériences & Projets</h2>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Projet actuel -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title">Développeur Full-Stack – Projet Fintech</h3>
+              <span class="timeline-company">
+                <i class="fas fa-code"></i> Projet personnel : Yonne Xaliss
+              </span>
+            </div>
+            <div class="timeline-period">
+              <i class="fas fa-calendar-alt"></i>
+              2025 — Présent
+            </div>
+          </div>
+
+          <ul class="timeline-tasks">
+            <li>Conception d'une plateforme de transfert d'argent sécurisée.</li>
+            <li>Développement d'API REST avec Spring Boot.</li>
+            <li>Mise en place de l'authentification JWT et gestion des rôles.</li>
+            <li>Création d'interfaces modernes avec React et TypeScript.</li>
+          </ul>
+
+          <div class="timeline-tech">
+            <span>Spring Boot</span>
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>MySQL</span>
+            <span>JWT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gestion collège -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title">Développeur Web – Gestion de Collège</h3>
+              <span class="timeline-company">
+                <i class="fas fa-code"></i> Projet personnel
+              </span>
+            </div>
+            <div class="timeline-period">
+              <i class="fas fa-calendar-alt"></i>
+              2025
+            </div>
+          </div>
+
+          <ul class="timeline-tasks">
+            <li>Développement complet d'un système de gestion scolaire.</li>
+            <li>Gestion des élèves, professeurs, surveillants et classes.</li>
+            <li>Calcul automatique des moyennes et génération de bulletins PDF.</li>
+            <li>Mise en place d'un système de notifications internes.</li>
+          </ul>
+
+          <div class="timeline-tech">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Bootstrap</span>
+            <span>TCPDF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projets académiques -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title">Projets Académiques en Génie Logiciel</h3>
+              <span class="timeline-company">
+                <i class="fas fa-graduation-cap"></i> Université Numérique Cheikh Hamidou Kane
+              </span>
+            </div>
+            <div class="timeline-period">
+              <i class="fas fa-calendar-alt"></i>
+              2025 — Présent
+            </div>
+          </div>
+
+          <ul class="timeline-tasks">
+            <li>Conception d'un système universitaire complet avec Angular et Spring Boot.</li>
+            <li>Développement d'un système distribué de gestion des ventes.</li>
+            <li>Implémentation d'un système distribué de partage de fichiers P2P.</li>
+            <li>Travaux pratiques sur les bases de données distribuées et les architectures logicielles.</li>
+          </ul>
+
+          <div class="timeline-tech">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Angular</span>
+            <span>PostgreSQL</span>
+            <span>Systèmes Distribués</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ====================================================
+       SECTION FORMATION
+  ===================================================== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Mes études</div>
+        <h2 class="section-title">Formation académique</h2>
+      </div>
+
+      <div class="education-grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="edu-content">
+            <div class="edu-period">2020 — 2023</div>
+            <h3 class="edu-degree">Licence en Informatique</h3>
+            <div class="edu-school">Université Numérique Cheikh Hamidou Kane, Dakar</div>
+            <p class="edu-description">
+              Fondamentaux de l'informatique, programmation orientée objet,
+              bases de données relationnelles, réseaux et systèmes. Mention Bien.
+            </p>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="edu-content">
+            <div class="edu-period">2024 — en cours</div>
+            <h3 class="edu-degree">Master en Ingénierie Logicielle</h3>
+            <div class="edu-school">Université Numérique Cheikh Hamidou Kane, Dakar</div>
+            <p class="edu-description">
+              Spécialisation en architecture logicielle, développement agile,
+              sécurité informatique et cloud computing.
+            </p>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="edu-content">
+            <div class="edu-period">Certifications</div>
+            <h3 class="edu-degree">Certifications professionnelles</h3>
+            <div class="edu-school">Plateformes en ligne</div>
+            <p class="edu-description">
+              Intélligence Artificielle (FORCEN) · Infographie
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECTION CONTACT
+  ===================================================== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Travaillons ensemble</div>
+        <h2 class="section-title">Contactez-moi</h2>
+        <p class="section-subtitle">
+          Un projet en tête ? Une opportunité à partager ? Je suis là !
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Informations de contact -->
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:alf1001fall@gmail.com" class="contact-value">
+                alf1001fall@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="contact-label">Téléphone</div>
+              <a href="tel:+221700000000" class="contact-value">+221 78 729 18 77</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-label">Localisation</div>
+              <span class="contact-value">Dakar, Sénégal</span>
+            </div>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div class="social-links">
+            <a href="https://github.com/Abdoulaye308" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" placeholder="Saisissez votre nom complet ici" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="vous@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" name="subject" placeholder="Proposition de mission..." required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou opportunité..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Envoyer le message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <!-- Message de succès (caché par défaut) -->
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              Message envoyé avec succès ! Je vous répondrai rapidement.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">AF</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-text">
+          Conçu et développé  par Abdoulaye Séne Fall
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/Abdoulaye308" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:alf1001fall@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Abdoulaye Séne Fall. Tous droits réservés.</span>
+        <a href="#hero" class="back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================
+       SCRIPT PRINCIPAL
+  ===================================================== -->
+  <script src="script.js"></script>
+</body>
+
+</html>
